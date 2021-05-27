@@ -1,0 +1,45 @@
+.Header {
+  height: 5rem;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+}
+
+.Header__nav {
+  .link {
+    color: var(--hightlight-text);
+    text-decoration: none;
+    font-weight: bold;
+
+    margin: 0 5px;
+  }
+
+  .link--signup {
+    @extend .link;
+  }
+
+  .link--signup::before {
+    content: '|';
+    padding: 0 10px 5px 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.logo__img {
+  height: 70px;
+}
+
+.logo__text {
+  font-family: Norse;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  color: var(--highlight-text);
+}

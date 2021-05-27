@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Norse;
+  src: url(/assets/font/norse/Norse.otf);
+}
+
+@font-face {
+  font-family: Norse;
+  font-weight: bold;
+  src: url(/assets/font/norse/Norsebold.otf);
+}
+
+@import '../css/boxes.min';
+
+:root {
+  --highlight-text: #cc9543;
+  --normal-text: rgba(74, 74, 74, 0.7);
+}
+
+body {
+  color: var(--normal-text);
+  font-family: sans-serif;
+}
+
+@import 'header';

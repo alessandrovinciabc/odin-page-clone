@@ -83,3 +83,51 @@
     width: 100%;
   }
 }
+
+//Process section
+
+.Process {
+  text-align: center;
+
+  &__header {
+    font-size: 1.5rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+  }
+}
+
+.Process__feature {
+  width: 33%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .feature__header,
+  .feature__text {
+    font-size: 1.1rem;
+    line-height: 2;
+  }
+
+  .feature__img {
+    height: 165px;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+}
+
+.Process__header,
+.Process__description {
+  max-width: 700px;
+  line-height: 2;
+}
+
+.Process__header,
+.feature__header {
+  font-weight: bold;
+  color: var(--bold-text);
+}

@@ -41,5 +41,45 @@
   font-size: 2rem;
   text-transform: uppercase;
 
-  color: var(--highlight-text);
+  color: var(--primary);
+}
+
+// Hero Section
+
+.Hero {
+  line-height: 2.4;
+  text-align: center;
+
+  &__header {
+    color: var(--primary);
+    font-weight: normal;
+    font-size: 2.2rem;
+
+    line-height: 1;
+  }
+
+  &__subtext {
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    color: var(--primary);
+  }
+
+  &__cta {
+    background-color: var(--secondary);
+    color: white;
+
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: capitalize;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+    height: 3.3rem;
+    width: 285px;
+  }
+
+  &__img {
+    width: 100%;
+  }
 }

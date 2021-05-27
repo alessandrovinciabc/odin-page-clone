@@ -1,0 +1,7 @@
+{
+  "name": "odin-page-clone",
+  "scripts": {
+    "watch": "sass --watch scss:dist",
+    "build": "sass --style=compressed scss:dist"
+  }
+}

@@ -53,6 +53,7 @@
   font-size: 1rem;
   text-transform: capitalize;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
 }
 
 .Hero {
@@ -99,7 +100,8 @@
 
 .Process__header,
 .feature__header,
-.Skills__header {
+.Skills__header,
+.Stories__header {
   @extend %section-header;
 }
 
@@ -183,5 +185,59 @@
     @extend .mt-3;
     font-size: 1.1rem;
     text-transform: uppercase;
+  }
+}
+
+.Stories {
+  background: linear-gradient(to bottom, #fff, #eee);
+
+  &__header {
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--normal-text);
+  }
+
+  &__cta-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__cta-btn {
+    @extend %button;
+
+    background-color: var(--secondary);
+    height: 3.3rem;
+    width: 180px;
+  }
+}
+
+.story {
+  width: 50%;
+  min-width: 300px;
+
+  margin-bottom: 3rem;
+
+  &__img {
+    margin-right: 1.8rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+  }
+}
+
+.story__details {
+  line-height: 2;
+  .details__name {
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .details__story {
+    font-size: 1.1rem;
   }
 }

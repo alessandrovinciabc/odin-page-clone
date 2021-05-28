@@ -46,6 +46,15 @@
 
 // Hero Section
 
+%button {
+  color: white;
+
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
 .Hero {
   line-height: 2.4;
   text-align: center;
@@ -67,14 +76,9 @@
   }
 
   &__cta {
+    @extend %button;
+
     background-color: var(--secondary);
-    color: white;
-
-    font-weight: bold;
-    font-size: 1rem;
-    text-transform: capitalize;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-
     height: 3.3rem;
     width: 285px;
   }
@@ -84,14 +88,23 @@
   }
 }
 
+%section-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  color: var(--bold-text);
+}
+
 //Process section
+
+.Process__header,
+.feature__header,
+.Skills__header {
+  @extend %section-header;
+}
 
 .Process {
   text-align: center;
-
-  &__header {
-    font-size: 1.5rem;
-  }
 
   &__description {
     font-size: 1.1rem;
@@ -126,8 +139,49 @@
   line-height: 2;
 }
 
-.Process__header,
-.feature__header {
-  font-weight: bold;
-  color: var(--bold-text);
+.Skills {
+  background-color: rgb(243, 243, 243);
+
+  &__container {
+    width: 80%;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__cta {
+    @extend %button;
+
+    background-color: var(--primary);
+    height: 3.3rem;
+    width: 230px;
+  }
+}
+
+.Skills__card {
+  @extend .p-5;
+  @extend .m-2;
+
+  text-align: center;
+
+  background-color: white;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  img {
+    height: 160px;
+    width: 160px;
+  }
+
+  .card__header {
+    @extend %section-header;
+    @extend .mt-3;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
 }
